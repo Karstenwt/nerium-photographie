@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Nerium Photographie</title>
+
+  <meta name="description" content="Portfolio mariage, couple et portrait. Photographies lumineuses, naturelles et élégantes.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body data-page="portfolio">
+
+  <div id="header"></div>
+
+  <section class="section">
+    <h2 class="title center">Portfolio</h2>
+
+    <div class="tabs" role="tablist" aria-label="Catégories portfolio">
+      <button class="tab active" data-target="galerie-mariage" type="button">Mariage</button>
+      <button class="tab" data-target="galerie-couple" type="button">Couple</button>
+      <button class="tab" data-target="galerie-portrait" type="button">Portrait</button>
+    </div>
+
+    <div id="galerie-mariage" class="portfolio-gallery active">
+      <img data-lightbox alt="Photo mariage 1" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=900&q=80">
+      <img data-lightbox alt="Photo mariage 2" src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=900&q=80">
+      <img data-lightbox alt="Photo mariage 3" src="https://images.unsplash.com/photo-1521310192545-4ac7951413f0?w=900&q=80">
+      <img data-lightbox alt="Photo mariage 4" src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&q=80">
+    </div>
+
+    <div id="galerie-couple" class="portfolio-gallery">
+      <img data-lightbox alt="Photo couple 1" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900&q=80">
+      <img data-lightbox alt="Photo couple 2" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=900&q=80">
+      <img data-lightbox alt="Photo couple 3" src="https://images.unsplash.com/photo-1522170527351-04a52d07e4a3?w=900&q=80">
+    </div>
+
+    <div id="galerie-portrait" class="portfolio-gallery">
+      <img data-lightbox alt="Portrait 1" src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=900&q=80">
+      <img data-lightbox alt="Portrait 2" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&q=80">
+      <img data-lightbox alt="Portrait 3" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=900&q=80">
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Fermer">×</button>
+      <img class="lightbox-image" alt="">
+    </div>
+  </div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

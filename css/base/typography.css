@@ -1,0 +1,9 @@
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--fg);
+  overflow-x:hidden;
+}
+
+.center{text-align:center}
+.muted{color:var(--muted)}

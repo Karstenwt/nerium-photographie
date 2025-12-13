@@ -1,0 +1,36 @@
+.lightbox{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:50;
+}
+.lightbox.show{display:flex}
+.lightbox-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+.lightbox-content{
+  position:relative;
+  max-width:90vw;
+  max-height:90vh;
+  z-index:51;
+}
+.lightbox-image{
+  max-width:100%;
+  max-height:100%;
+  border-radius:18px;
+  box-shadow:var(--shadow-hover);
+}
+.lightbox-close{
+  position:absolute;
+  top:-36px;
+  right:0;
+  background:none;
+  border:none;
+  color:white;
+  font-size:30px;
+  cursor:pointer;
+}

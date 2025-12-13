@@ -1,0 +1,36 @@
+.hero{
+  min-height:82vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 20px 80px;
+  background:linear-gradient(135deg,#fdfdfd,#f0ecff);
+}
+.hero-inner{
+  max-width:800px;
+  text-align:left;
+}
+.hero-overline{
+  font-size:14px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:12px;
+}
+.hero h1{
+  font-family:var(--font-title);
+  font-size:48px;
+  line-height:1.2;
+  letter-spacing:-0.04em;
+  margin-bottom:16px;
+}
+.hero-text{
+  font-size:18px;
+  color:var(--muted);
+  max-width:560px;
+}
+
+@media (max-width: 860px){
+  .hero{padding-top:120px;text-align:center}
+  .hero-inner{text-align:center}
+}

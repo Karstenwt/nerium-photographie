@@ -1,0 +1,14 @@
+/* Transition globale entre pages */
+body {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+body.page-visible {
+  opacity: 1;
+}
+
+/* Optionnel : empêche scroll pendant transition */
+body.page-transition {
+  pointer-events: none;
+}

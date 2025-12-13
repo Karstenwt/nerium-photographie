@@ -1,0 +1,65 @@
+.lux-intro{
+  max-width:820px;
+  margin:auto;
+  text-align:center;
+  font-size:21px;
+  line-height:1.8;
+  color:var(--muted);
+  margin-bottom:70px;
+  font-weight:300;
+}
+
+.lux-grid{
+  display:grid;
+  gap:60px;
+  grid-template-columns:repeat(auto-fit, minmax(380px, 1fr));
+}
+
+.lux-card{
+  background:white;
+  padding:50px 45px;
+  border-radius:26px;
+  border:1px solid rgba(0,0,0,0.07);
+  box-shadow:0 15px 45px rgba(0,0,0,0.06);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.lux-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+}
+
+.lux-title{
+  font-family:"Playfair Display", serif;
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:10px;
+  letter-spacing:-0.5px;
+  color:var(--fg);
+}
+
+.lux-sub{
+  font-size:17px;
+  color:var(--muted);
+  margin-bottom:25px;
+  letter-spacing:.3px;
+}
+
+.lux-list{
+  margin:0;
+  padding-left:20px;
+  line-height:1.8;
+  font-size:18px;
+}
+
+.lux-price{
+  margin-top:28px;
+  font-family:"Playfair Display", serif;
+  font-size:30px;
+  font-weight:600;
+  color:var(--accent);
+}
+
+.lux-cta{
+  margin-top:22px;
+  display:inline-block;
+}

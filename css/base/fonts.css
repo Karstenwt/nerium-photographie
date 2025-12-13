@@ -1,0 +1,39 @@
+@font-face{
+  font-family:"Open Sans";
+  src:url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight:400;
+  font-style:normal;
+  font-display:block;
+}
+
+@font-face{
+  font-family:"Open Sans";
+  src:url("/assets/fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight:600;
+  font-style:normal;
+  font-display:block;
+}
+
+@font-face{
+  font-family:"Open Sans";
+  src:url("/assets/fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight:700;
+  font-style:normal;
+  font-display:block;
+}
+
+@font-face{
+  font-family:"Playfair Display";
+  src:url("/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight:100 900;
+  font-style:normal;
+  font-display:block;
+}
+
+@font-face{
+  font-family:"Great Vibes";
+  src:url("/assets/fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight:400;
+  font-style:normal;
+  font-display:block;
+}
