@@ -1,0 +1,40 @@
+/* =====================================================
+   Animation d’entrée douce (FADEUP) — VERSION STABLE
+   Objectif: pas de blocs invisibles si l’animation rate
+   ===================================================== */
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FAIL-SAFE:
+   Par défaut, on laisse visible (pas d’écran vide). */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* Quand la page est visible, on anime vraiment */
+body.page-visible .reveal {
+  opacity: 0;                 /* point de départ pour l’anim */
+  transform: translateY(12px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* Délais progressifs */
+body.page-visible .reveal.delay-1 { animation-delay: 0.10s; }
+body.page-visible .reveal.delay-2 { animation-delay: 0.20s; }
+body.page-visible .reveal.delay-3 { animation-delay: 0.30s; }
+
+/* Pendant la transition de page: éviter les glitches */
+body.page-transition .reveal {
+  animation: none !important;
+}

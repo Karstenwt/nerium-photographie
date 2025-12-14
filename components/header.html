@@ -1,20 +1,30 @@
-<nav>
-  <div class="logo-wrapper">
-    <a href="/index.html">
-      <svg class="logo-svg" viewBox="0 0 320 80">
-        <text x="0" y="35" class="logo-main">Nerium</text>
-        <text x="2" y="65" class="logo-sub">Photographie</text>
-      </svg>
-    </a>
-  </div>
+<nav class="nav">
+  <div class="nav-inner">
 
-  <button class="nav-toggle">
-    <span></span><span></span><span></span>
-  </button>
+    <!-- LOGO -->
+    <div class="logo-wrapper">
+      <a href="./index.html" aria-label="Accueil">
+        <svg class="logo-svg" viewBox="0 0 320 80" role="img">
+          <text x="0" y="38" class="logo-main">Nerium</text>
+          <text x="2" y="68" class="logo-sub">Photographie</text>
+        </svg>
+      </a>
+    </div>
 
-  <div class="nav-links">
-    <a href="/pages/mariage.html">Mariage</a>
-    <a href="/pages/portfolio.html">Portfolio</a>
-    <a href="/pages/contact.html">Contact</a>
+    <!-- BURGER -->
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- LIENS -->
+    <div class="nav-links" data-nav-links>
+      <a href="./index.html">Accueil</a>
+      <a href="./pages/mariage.html">Mariage</a>
+      <a href="./pages/portfolio.html">Portfolio</a>
+      <a href="./pages/contact.html">Contact</a>
+    </div>
+
   </div>
 </nav>

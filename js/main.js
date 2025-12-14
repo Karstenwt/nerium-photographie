@@ -13,68 +13,45 @@ function initNav() {
   if (!toggle || !links) return;
 
   toggle.addEventListener("click", () => {
-    const isOpen = links.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
+    links.classList.toggle("open");
   });
 }
 
-/* 👇 Transition douce lors des changements de page */
-function initPageTransitions() {
-  document.querySelectorAll("a[href]").forEach((link) => {
-    const href = link.getAttribute("href");
+function initRevealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
 
-    if (
-      !href ||
-      href.startsWith("#") ||
-      href.startsWith("http") ||
-      link.hasAttribute("target")
-    )
-      return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        } else {
+          entry.target.classList.remove("is-visible");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.body.classList.add("page-transition");
-      document.body.classList.remove("page-visible");
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 300);
-    });
-  });
+  reveals.forEach((el) => observer.observe(el));
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    /* Fonts prêtes → pas de flash */
+    /* ⬇️ CRITIQUE : on attend les fonts */
     if (document.fonts && document.fonts.ready) {
       await document.fonts.ready;
     }
 
-    /* Affichage progressif */
+    /* ⬇️ CRITIQUE : on autorise l’affichage de la nav */
     document.body.classList.add("fonts-loaded");
-    document.body.classList.add("page-visible");
 
-    await loadComponent("#header", "/components/header.html");
-    await loadComponent("#footer", "/components/footer.html");
+    await loadComponent("#header", "./components/header.html");
+    await loadComponent("#footer", "./components/footer.html");
 
     initNav();
-    initPageTransitions();
-
-    const page = document.body.dataset.page;
-
-    if (page === "portfolio") {
-      const mod = await import("./tabs.js");
-      mod.initTabs();
-      const lb = await import("./lightbox.js");
-      lb.initLightbox();
-    }
-
-    if (page === "home") {
-      const lb = await import("./lightbox.js");
-      lb.initLightbox();
-    }
+    initRevealOnScroll();
   } catch (e) {
     console.error(e);
-    document.body.classList.add("page-visible");
   }
 });
