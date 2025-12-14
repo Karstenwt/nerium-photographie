@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     /* ⬇️ CRITIQUE : on autorise l’affichage de la nav */
     document.body.classList.add("fonts-loaded");
 
-    await loadComponent("#header", "./components/header.html");
-    await loadComponent("#footer", "./components/footer.html");
+    await loadComponent("#header", "../components/header.html");
+    await loadComponent("#footer", "../components/footer.html");
 
     initNav();
     initRevealOnScroll();

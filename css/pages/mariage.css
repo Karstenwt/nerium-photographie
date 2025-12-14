@@ -1,65 +1,134 @@
-.lux-intro{
-  max-width:820px;
-  margin:auto;
-  text-align:center;
-  font-size:21px;
-  line-height:1.8;
-  color:var(--muted);
-  margin-bottom:70px;
-  font-weight:300;
+/* =====================================================
+   PAGE MARIAGE — STYLE & LISIBILITÉ
+   ===================================================== */
+
+/* Fond global de la page */
+body[data-page="mariage"] {
+  background: #ffffff;
 }
 
-.lux-grid{
-  display:grid;
-  gap:60px;
-  grid-template-columns:repeat(auto-fit, minmax(380px, 1fr));
+/* ===============================
+   HERO SIMPLE
+   =============================== */
+
+.hero-simple {
+  min-height: 60vh;
+  padding: 140px 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    180deg,
+    #f8f8fa 0%,
+    #ffffff 100%
+  );
 }
 
-.lux-card{
-  background:white;
-  padding:50px 45px;
-  border-radius:26px;
-  border:1px solid rgba(0,0,0,0.07);
-  box-shadow:0 15px 45px rgba(0,0,0,0.06);
-  transition:transform .3s ease, box-shadow .3s ease;
-}
-.lux-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+.hero-simple .hero-content {
+  max-width: 820px;
 }
 
-.lux-title{
-  font-family:"Playfair Display", serif;
-  font-size:34px;
-  font-weight:700;
-  margin-bottom:10px;
-  letter-spacing:-0.5px;
-  color:var(--fg);
+/* ===============================
+   TEXTE & TYPOGRAPHIE
+   =============================== */
+
+body[data-page="mariage"] p {
+  color: #1a1a1d;
 }
 
-.lux-sub{
-  font-size:17px;
-  color:var(--muted);
-  margin-bottom:25px;
-  letter-spacing:.3px;
+body[data-page="mariage"] .editorial {
+  margin-top: 40px;
 }
 
-.lux-list{
-  margin:0;
-  padding-left:20px;
-  line-height:1.8;
-  font-size:18px;
+body[data-page="mariage"] .editorial-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #1a1a1d;
 }
 
-.lux-price{
-  margin-top:28px;
-  font-family:"Playfair Display", serif;
-  font-size:30px;
-  font-weight:600;
-  color:var(--accent);
+body[data-page="mariage"] .muted {
+  color: #6f6f73;
 }
 
-.lux-cta{
-  margin-top:22px;
-  display:inline-block;
+/* ===============================
+   TITRES
+   =============================== */
+
+body[data-page="mariage"] h1,
+body[data-page="mariage"] h2,
+body[data-page="mariage"] h3 {
+  color: #1a1a1d;
+}
+
+body[data-page="mariage"] .editorial-title {
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   CARTES (VALEURS & FORFAITS)
+   =============================== */
+
+body[data-page="mariage"] .cards {
+  margin-top: 40px;
+}
+
+body[data-page="mariage"] .cards .card {
+  text-align: center;
+  padding: 32px 26px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow);
+}
+
+body[data-page="mariage"] .cards .card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+body[data-page="mariage"] .cards .card .price {
+  margin-top: 18px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ===============================
+   PROCESS / BLOCS ÉDITORIAUX
+   =============================== */
+
+body[data-page="mariage"] .editorial-block {
+  margin-bottom: 70px;
+}
+
+/* ===============================
+   CTA FINAL
+   =============================== */
+
+body[data-page="mariage"] .section.center {
+  margin-top: 40px;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 860px) {
+
+  .hero-simple {
+    padding: 120px 20px 60px;
+    min-height: 50vh;
+  }
+
+  body[data-page="mariage"] .editorial-text {
+    font-size: 17px;
+  }
+
+  body[data-page="mariage"] .cards {
+    gap: 22px;
+  }
 }
