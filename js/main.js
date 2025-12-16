@@ -38,16 +38,18 @@ function initRevealOnScroll() {
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    /* ⬇️ CRITIQUE : on attend les fonts */
     if (document.fonts && document.fonts.ready) {
       await document.fonts.ready;
     }
 
-    /* ⬇️ CRITIQUE : on autorise l’affichage de la nav */
     document.body.classList.add("fonts-loaded");
 
-    await loadComponent("#header", "../components/header.html");
-    await loadComponent("#footer", "../components/footer.html");
+    /* 🔑 HEADER / FOOTER — chemins intelligents */
+    const depth = location.pathname.split("/").length - 2;
+    const prefix = "../".repeat(depth);
+
+    await loadComponent("#header", `${prefix}components/header.html`);
+    await loadComponent("#footer", `${prefix}components/footer.html`);
 
     initNav();
     initRevealOnScroll();
