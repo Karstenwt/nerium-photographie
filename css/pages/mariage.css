@@ -1,15 +1,11 @@
-/* ===============================
-   GLOBAL PAGE MARIAGE
-   =============================== */
+
 
 body[data-page="mariage"] {
   background: #ffffff;
   color: #1a1a1d;
 }
 
-/* ===============================
-   HERO SIMPLE (SANS PHOTO)
-   =============================== */
+
 
 .hero-simple {
   min-height: 60vh;
@@ -20,7 +16,7 @@ body[data-page="mariage"] {
   background: linear-gradient(180deg, #f8f8fa 0%, #ffffff 100%);
 }
 
-/* Force les couleurs du hero mariage */
+
 body[data-page="mariage"] .hero-simple,
 body[data-page="mariage"] .hero-simple * {
   color: #1a1a1d;
@@ -47,9 +43,7 @@ body[data-page="mariage"] .hero-simple .hero-text {
   margin: 0 auto;
 }
 
-/* ===============================
-   STRUCTURE ÉDITORIALE
-   =============================== */
+
 
 .editorial {
   max-width: 1100px;
@@ -110,7 +104,7 @@ body[data-page="mariage"] .hero-simple .hero-text {
   width: 100%;
   max-height: 720px;
   object-fit: cover;
-  border-radius: 20px;
+ 
   display: block;
   box-shadow: var(--shadow);
 }

@@ -22,13 +22,23 @@
   <!-- HERO -->
   <header class="hero hero-photo">
     <div class="hero-media">
+
       <img
-        src="./assets/images/hero/hero.jpg"
+        src="./assets/images/hero/hero-1280.avif"
+        srcset="
+          ./assets/images/hero/hero-768.avif 768w,
+          ./assets/images/hero/hero-1280.avif 1280w,
+          ./assets/images/hero/hero-1920.avif 1920w
+        "
+        sizes="100vw"
         alt="Photographe de mariage — images naturelles et intemporelles"
+        width="1920"
+        height="1080"
         loading="eager"
         decoding="async"
         fetchpriority="high"
       />
+
     </div>
 
     <div class="hero-overlay"></div>
@@ -67,11 +77,21 @@
     </div>
 
     <div class="editorial-block reveal media">
+
       <img
-        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1200&q=80"
+        src="./assets/images/editorial/editorial-1-1200.avif"
+        srcset="
+          ./assets/images/editorial/editorial-1-600.avif 600w,
+          ./assets/images/editorial/editorial-1-1200.avif 1200w
+        "
+        sizes="(max-width: 768px) 100vw, 1200px"
         alt="Photographie de mariage naturelle"
+        width="1200"
+        height="800"
         loading="lazy"
+        decoding="async"
       />
+
     </div>
 
     <div class="editorial-block reveal center">
@@ -89,11 +109,21 @@
     </div>
 
     <div class="editorial-block reveal media">
+
       <img
-        src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80"
-        alt="Détails mariage"
+        src="./assets/images/editorial/editorial-2-1200.avif"
+        srcset="
+          ./assets/images/editorial/editorial-2-600.avif 600w,
+          ./assets/images/editorial/editorial-2-1200.avif 1200w
+        "
+        sizes="(max-width: 768px) 100vw, 1200px"
+        alt="Détails de mariage"
+        width="1200"
+        height="800"
         loading="lazy"
+        decoding="async"
       />
+
     </div>
 
     <div class="editorial-block reveal center">

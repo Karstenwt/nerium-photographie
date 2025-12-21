@@ -1,15 +1,11 @@
-/* ===============================
-   PAGE GALERIE — STYLE PRO
-   =============================== */
+
 
 body[data-page="gallery"] {
   background: #ffffff;
   color: #1a1a1d;
 }
 
-/* ===============================
-   HERO GALERIE (IMAGE LARGE MAIS MAÎTRISÉE)
-   =============================== */
+
 
 .gallery-hero {
   margin-top: 120px;
@@ -22,15 +18,13 @@ body[data-page="gallery"] {
 .gallery-hero img {
   width: 100%;
   height: auto;
-  max-height: 70vh;           /* ⬅️ PAS plein écran */
+  max-height: 70vh;
   object-fit: cover;
-  border-radius: 20px;
+  
   box-shadow: var(--shadow);
 }
 
-/* ===============================
-   INTRO GALERIE
-   =============================== */
+
 
 .gallery-intro {
   max-width: 720px;
@@ -61,9 +55,7 @@ body[data-page="gallery"] {
   color: #1a1a1d;
 }
 
-/* ===============================
-   GRILLE D’IMAGES (15+ PHOTOS)
-   =============================== */
+
 
 .gallery-content {
   max-width: 1200px;
@@ -77,7 +69,7 @@ body[data-page="gallery"] {
 
 .gallery-item {
   overflow: hidden;
-  border-radius: 18px;
+  
 }
 
 .gallery-item img {
