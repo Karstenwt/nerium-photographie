@@ -1,12 +1,14 @@
-
+/* ===============================
+   PAGE GALLERY — OPTION 1
+   Images non tronquées (ratio respecté)
+   =============================== */
 
 body[data-page="gallery"] {
   background: #ffffff;
   color: #1a1a1d;
 }
 
-
-
+/* HERO IMAGE */
 .gallery-hero {
   margin-top: 120px;
   max-width: 1200px;
@@ -19,13 +21,11 @@ body[data-page="gallery"] {
   width: 100%;
   height: auto;
   max-height: 70vh;
-  object-fit: cover;
-  
+  object-fit: cover; /* OK ici : image décorative */
   box-shadow: var(--shadow);
 }
 
-
-
+/* INTRO */
 .gallery-intro {
   max-width: 720px;
   margin: 100px auto;
@@ -55,7 +55,9 @@ body[data-page="gallery"] {
   color: #1a1a1d;
 }
 
-
+/* ===============================
+   GALERIE — ZÉRO CROP
+   =============================== */
 
 .gallery-content {
   max-width: 1200px;
@@ -68,20 +70,21 @@ body[data-page="gallery"] {
 }
 
 .gallery-item {
-  overflow: hidden;
-  
+  margin: 0;
+  overflow: visible; /* IMPORTANT : ne pas couper */
 }
 
 .gallery-item img {
   width: 100%;
-  height: 420px;
-  object-fit: cover;
+  height: auto;           /* clé du non-crop */
   display: block;
-  transition: transform 0.5s ease;
+  
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease;
 }
 
 .gallery-item img:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 /* ===============================
@@ -97,10 +100,6 @@ body[data-page="gallery"] {
 @media (max-width: 640px) {
   .gallery-content {
     grid-template-columns: 1fr;
-  }
-
-  .gallery-item img {
-    height: 320px;
   }
 
   .gallery-title {

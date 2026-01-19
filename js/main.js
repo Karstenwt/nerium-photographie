@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.body.classList.add("fonts-loaded");
 
-    /* 🔑 HEADER / FOOTER — chemins intelligents */
     const depth = location.pathname.split("/").length - 2;
     const prefix = "../".repeat(depth);
 
