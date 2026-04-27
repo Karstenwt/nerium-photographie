@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Lightbox from '@/components/Lightbox'
+import MagneticWord from '@/components/MagneticWord'
 
 export const metadata = {
   title: 'Sophie & Antonin — Nerium Photographie',
@@ -34,8 +35,8 @@ export default function SophieEtAntonin() {
         <p className="gallery-overline">Reportage de mariage</p>
         <h1 className="gallery-title">Sophie & Antonin</h1>
         <p className="gallery-text">
-          Un mariage intime et lumineux, dans les Deux-Sèvres.
-          Des instants vrais, captés avec discrétion et douceur.
+          Un <MagneticWord>mariage</MagneticWord> intime et lumineux, dans les Deux-Sèvres.
+          Des <MagneticWord>instants</MagneticWord> vrais, captés avec discrétion et douceur.
         </p>
       </div>
 

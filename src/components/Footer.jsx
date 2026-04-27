@@ -3,11 +3,11 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer>
-      © 2025 — Nerium Photographie · Tous droits réservés
+      &copy; 2025 &mdash; Nerium Photographie &middot; Tous droits r&eacute;serv&eacute;s
       <br />
-      <Link href="/contact" className="muted">Me contacter</Link>
-      <span className="muted"> · </span>
-      <Link href="/a-propos" className="muted">À propos</Link>
+      <Link href="/contact">Me contacter</Link>
+      <span> &middot; </span>
+      <Link href="/a-propos">&Agrave; propos</Link>
     </footer>
   )
 }

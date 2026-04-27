@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Reveal from '@/components/Reveal'
+import MagneticWord from '@/components/MagneticWord'
 
 const galleries = {
   mariage: [
@@ -59,7 +60,7 @@ export default function Portfolio() {
           <p className="hero-overline">Portfolio</p>
           <h1 className="hero-signature">Reportages & galeries</h1>
           <p className="hero-text subtle">
-            Une sélection de mariages et projets photographiques.
+            Une sélection de <MagneticWord>mariages</MagneticWord> et projets photographiques.
           </p>
         </div>
       </header>
@@ -97,7 +98,7 @@ export default function Portfolio() {
       {/* CTA */}
       <Reveal>
         <section className="section center">
-          <h2 className="title">Découvrir l&apos;approche mariage</h2>
+          <h2 className="title">Découvrir l&apos;approche <MagneticWord>mariage</MagneticWord></h2>
           <Link href="/mariage" className="hero-link">
             Voir les prestations →
           </Link>

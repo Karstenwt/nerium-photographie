@@ -12,7 +12,7 @@ export default function Reveal({ children, className = '', delay = '' }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add('is-visible')
+          el.classList.add('visible')
           observer.unobserve(el)
         }
       },

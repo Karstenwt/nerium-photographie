@@ -1,60 +1,80 @@
-'use client'
+'use client';
 
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+
+const NAV_LINKS = [
+  { label: 'Accueil',    href: '/',          img: '/assets/images/hero/hero-768.avif'       },
+  { label: 'Portfolio',  href: '/portfolio',  img: '/assets/images/portfolio/sophie-et-antonin/mariée.avif' },
+  { label: 'Mariages',   href: '/mariage',    img: '/assets/images/hero/mariage-hero.jpg'    },
+  { label: 'À propos',   href: '/a-propos',   img: '/assets/images/editorial/editorial-1-600.avif' },
+  { label: 'Contact',    href: '/contact',    img: '/assets/images/editorial/editorial-2-600.avif' },
+];
 
 export default function Nav() {
-  const pathname = usePathname()
-  const [open, setOpen] = useState(false)
+  const [scrolled,     setScrolled]     = useState(false);
+  const [menuOpen,     setMenuOpen]     = useState(false);
+  const [hoveredLink,  setHoveredLink]  = useState(null);
 
-  const links = [
-    { href: '/', label: 'Accueil' },
-    { href: '/mariage', label: 'Mariage' },
-    { href: '/portfolio', label: 'Portfolio' },
-    { href: '/a-propos', label: 'À propos' },
-    { href: '/contact', label: 'Contact' },
-  ]
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   return (
-    <nav>
-      <div className="nav-inner">
-        <div className="logo-wrapper">
-          <Link href="/" aria-label="Accueil">
-            <svg className="logo-svg" viewBox="0 0 320 80" role="img">
-              <text x="0" y="38" className="logo-main">Nerium</text>
-              <text x="2" y="68" className="logo-sub">Photographie</text>
-            </svg>
-          </Link>
-        </div>
+    <>
+      <nav className={`nr-nav ${scrolled ? 'nr-nav--scrolled' : ''}`}>
+        <Link href="/" className="nr-nav__logo">Nerium</Link>
+
+        <ul className="nr-nav__links">
+          {NAV_LINKS.map(link => (
+            <li key={link.href} className="nr-nav__item"
+              onMouseEnter={() => setHoveredLink(link.href)}
+              onMouseLeave={() => setHoveredLink(null)}
+            >
+              <Link href={link.href} className="nr-nav__link">{link.label}</Link>
+
+              <div className={`nr-nav__img-reveal ${hoveredLink === link.href ? 'nr-nav__img-reveal--show' : ''}`}>
+                <img src={link.img} alt={link.label} width={160} height={100} />
+              </div>
+            </li>
+          ))}
+        </ul>
 
         <button
-          className="nav-toggle"
+          className={`nr-nav__burger ${menuOpen ? 'nr-nav__burger--open' : ''}`}
+          onClick={() => setMenuOpen(v => !v)}
           aria-label="Menu"
-          onClick={() => setOpen(!open)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span /><span /><span />
         </button>
+      </nav>
 
-        <div className={`nav-links${open ? ' open' : ''}`}>
-          {links.map(({ href, label }) => (
+      <div className={`nr-menu ${menuOpen ? 'nr-menu--open' : ''}`}>
+        <button className="nr-menu__close" onClick={() => setMenuOpen(false)}>✕ Fermer</button>
+
+        <nav className="nr-menu__links">
+          {NAV_LINKS.map((link, i) => (
             <Link
-              key={href}
-              href={href}
-              className={
-                href === '/'
-                  ? pathname === '/' ? 'active' : ''
-                  : pathname.startsWith(href) ? 'active' : ''
-              }
-              onClick={() => setOpen(false)}
+              key={link.href}
+              href={link.href}
+              className="nr-menu__link"
+              style={{ transitionDelay: menuOpen ? `${0.08 + i * 0.08}s` : '0s' }}
+              onClick={() => setMenuOpen(false)}
             >
-              {label}
+              {link.label}
             </Link>
           ))}
-        </div>
+        </nav>
+
+        <p className="nr-menu__sub">Nerium Photographie · Deux-Sèvres · France &amp; International</p>
       </div>
-    </nav>
-  )
+    </>
+  );
 }
