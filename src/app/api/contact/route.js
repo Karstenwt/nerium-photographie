@@ -9,8 +9,10 @@ export async function POST(request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Email de confirmation au couple
+    // Note : tant que le domaine n'est pas vérifié sur Resend,
+    // l'adresse "from" doit être onboarding@resend.dev
     await resend.emails.send({
-      from:    'Karsten — Nerium Photographie <contact@nerium-photographie.fr>',
+      from:    'Nerium Photographie <onboarding@resend.dev>',
       to:      [email],
       subject: `Merci ${prenoms} — Votre demande pour le ${date}`,
       html: `
@@ -39,10 +41,10 @@ export async function POST(request) {
       `,
     });
 
-    // Notification à Karsten
+    // Notification à Karsten sur Gmail
     await resend.emails.send({
-      from:    'Nerium — Nouvelle demande <no-reply@nerium-photographie.fr>',
-      to:      ['karsten@nerium-photographie.fr'],
+      from:    'Nerium Photographie <onboarding@resend.dev>',
+      to:      ['nerium.photographie@gmail.com'],
       subject: `Nouvelle demande — ${prenoms} — ${date} à ${lieu}`,
       html: `
         <div style="font-family: Georgia, serif; max-width: 560px; margin: 0 auto; padding: 32px 24px;">
