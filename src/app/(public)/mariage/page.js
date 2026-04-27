@@ -3,8 +3,9 @@ import Reveal from '@/components/Reveal'
 import MagneticWord from '@/components/MagneticWord'
 
 export const metadata = {
-  title: 'Photographe de mariage dans les Deux-Sevres (79) — Prestations & Tarifs',
-  description: 'Photographe de mariage dans les Deux-Sevres (79). Reportage naturel, lumineux et sincere. Prestations mariage de 1290 a 1990 euros.',
+  title: 'Prestations & tarifs mariage — Photographe Deux-Sèvres (79)',
+  description: 'Découvrez mes prestations de photographe de mariage dans les Deux-Sèvres (79), près de Niort. Reportage naturel et lumineux, du préparatif à la soirée. Forfaits de 1 290 € à 1 990 €. Disponible en Nouvelle-Aquitaine et dans toute la France.',
+  alternates: { canonical: 'https://www.nerium-photographie.com/mariage' },
 }
 
 export default function Mariage() {

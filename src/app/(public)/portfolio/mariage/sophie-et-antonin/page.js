@@ -3,8 +3,9 @@ import Lightbox from '@/components/Lightbox'
 import MagneticWord from '@/components/MagneticWord'
 
 export const metadata = {
-  title: 'Sophie & Antonin — Nerium Photographie',
-  description: 'Reportage de mariage — Sophie & Antonin',
+  title: 'Sophie & Antonin — Reportage de mariage',
+  description: 'Reportage de mariage de Sophie & Antonin dans les Deux-Sèvres. Un mariage intime et lumineux, capté avec discrétion et douceur par Nerium Photographie.',
+  alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/sophie-et-antonin' },
 }
 
 const images = [

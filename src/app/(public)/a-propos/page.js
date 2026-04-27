@@ -3,8 +3,9 @@ import Reveal from '@/components/Reveal'
 import MagneticWord from '@/components/MagneticWord'
 
 export const metadata = {
-  title: 'A propos — Nerium Photographie',
-  description: 'Photographe de mariage au style lumineux et editorial. Decouvrez mon approche, mon parcours et ma vision de la photographie.',
+  title: 'À propos de Karsten — Photographe de mariage',
+  description: 'Je suis Karsten, photographe de mariage basé dans les Deux-Sèvres (79). Mon approche : lumière naturelle, émotions sincères et discrétion. Découvrez mon parcours et ma vision de la photographie de mariage.',
+  alternates: { canonical: 'https://www.nerium-photographie.com/a-propos' },
 }
 
 export default function APropos() {
