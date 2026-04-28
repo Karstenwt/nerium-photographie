@@ -8,6 +8,8 @@ export default function Footer() {
       <Link href="/contact">Me contacter</Link>
       <span> &middot; </span>
       <Link href="/a-propos">&Agrave; propos</Link>
+      <span> &middot; </span>
+      <Link href="/mentions-legales">Mentions l&eacute;gales</Link>
     </footer>
   )
 }
