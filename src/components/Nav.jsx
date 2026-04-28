@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const NAV_LINKS = [
   { label: 'Accueil',    href: '/',          img: '/assets/images/hero/hero-768.avif'       },
   { label: 'Portfolio',  href: '/portfolio',  img: '/assets/images/portfolio/sophie-et-antonin/mariée.avif' },
-  { label: 'Mariages',   href: '/mariage',    img: '/assets/images/hero/mariage-hero.jpg'    },
+  { label: 'Mariages',   href: '/mariage',    img: '/assets/images/hero/hero-1280-.avif'     },
   { label: 'À propos',   href: '/a-propos',   img: '/assets/images/editorial/editorial-1-600.avif' },
   { label: 'Contact',    href: '/contact',    img: '/assets/images/editorial/editorial-2-600.avif' },
 ];
@@ -41,7 +42,7 @@ export default function Nav() {
               <Link href={link.href} className="nr-nav__link">{link.label}</Link>
 
               <div className={`nr-nav__img-reveal ${hoveredLink === link.href ? 'nr-nav__img-reveal--show' : ''}`}>
-                <img src={link.img} alt={link.label} width={160} height={100} />
+                <Image src={link.img} alt={link.label} width={160} height={100} quality={70} />
               </div>
             </li>
           ))}

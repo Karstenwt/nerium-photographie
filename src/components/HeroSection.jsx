@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import MagneticWord from '@/components/MagneticWord';
 
 const WORDS = ['intemporelles', 'sincères', 'profondes', 'éternelles'];
@@ -8,8 +9,8 @@ const WORD_H = 72;
 
 const HERO_PHOTOS = [
   '/assets/images/hero/hero-1920.avif',
-  '/assets/images/hero/hero.jpg',
-  '/assets/images/hero/mariage-hero.jpg',
+  '/assets/images/hero/hero-1280-.avif',
+  '/assets/images/hero/hero-768.avif',
 ];
 
 export default function HeroSection() {
@@ -68,13 +69,16 @@ export default function HeroSection() {
       {/* Morphing photos */}
       <div className="nr-hero__media" ref={mediaRef}>
         {HERO_PHOTOS.map((src, i) => (
-          <img
+          <Image
             key={src}
             src={src}
             alt="Photographie de mariage"
             className={`nr-hero__slide ${i === slideIdx ? 'nr-hero__slide--active' : ''}`}
             width={1920} height={1080}
+            priority={i === 0}
             loading={i === 0 ? 'eager' : 'lazy'}
+            quality={80}
+            sizes="100vw"
           />
         ))}
       </div>

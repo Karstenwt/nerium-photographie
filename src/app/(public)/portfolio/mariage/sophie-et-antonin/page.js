@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Lightbox from '@/components/Lightbox'
 import MagneticWord from '@/components/MagneticWord'
 
@@ -23,10 +24,13 @@ export default function SophieEtAntonin() {
     <>
       {/* HERO IMAGE */}
       <div className="gallery-hero">
-        <img
+        <Image
           src="/assets/images/portfolio/sophie-et-antonin/mariée.avif"
           alt="Sophie & Antonin — Reportage de mariage"
-          loading="eager"
+          width={1920} height={1080}
+          priority
+          quality={85}
+          sizes="100vw"
         />
       </div>
 

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import Reveal from '@/components/Reveal'
 import MagneticWord from '@/components/MagneticWord'
@@ -85,7 +86,7 @@ export default function PortfolioClient() {
             {galleries[key].map((g, i) => (
               <Reveal key={i}>
                 <Link href={g.href} className="gallery-card">
-                  <img src={g.img} alt={g.title} loading="lazy" />
+                  <Image src={g.img} alt={g.title} width={1200} height={800} loading="lazy" quality={80} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" />
                   <h2>{g.title}</h2>
                   <p>{g.label}</p>
                 </Link>

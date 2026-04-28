@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import MagneticWord from '@/components/MagneticWord';
 
 const MARIAGES = [
@@ -21,9 +21,21 @@ const MARIAGES = [
 export default function MapMariages() {
   const mapRef       = useRef(null);
   const instanceRef  = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  // Only load leaflet when the section scrolls into view
+  useEffect(() => {
+    const el = mapRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setVisible(true); io.disconnect(); }
+    }, { rootMargin: '200px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   useEffect(() => {
-    if (instanceRef.current || !mapRef.current) return;
+    if (!visible || instanceRef.current || !mapRef.current) return;
 
     import('leaflet').then(L => {
       // Import leaflet CSS dynamically

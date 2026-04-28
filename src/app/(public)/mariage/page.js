@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import MagneticWord from '@/components/MagneticWord'
 
@@ -46,15 +47,13 @@ export default function Mariage() {
       {/* IMAGE EDITORIALE */}
       <section className="editorial-dark">
         <Reveal className="editorial-block media">
-          <img
+          <Image
             src="/assets/images/editorial/editorial-2-1200.avif"
-            srcSet="
-              /assets/images/editorial/editorial-2-600.avif 600w,
-              /assets/images/editorial/editorial-2-1200.avif 1200w
-            "
-            sizes="(max-width: 768px) 100vw, 1200px"
             alt="Photographie de mariage naturelle et lumineuse"
+            width={1200} height={800}
             loading="lazy"
+            quality={80}
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
         </Reveal>
       </section>

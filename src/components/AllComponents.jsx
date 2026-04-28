@@ -3,6 +3,7 @@
 // ═══════════════════════════════════════════
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import MagneticWord from '@/components/MagneticWord';
 
 const STATS = [
@@ -147,7 +148,7 @@ export function GalleryStrip() {
       <div className="nr-gallery-strip__track">
         {items.map((item, i) => (
           <div key={i} className="nr-gallery-strip__item">
-            <img src={item.src} alt={item.label} loading="lazy" />
+            <Image src={item.src} alt={item.label} width={400} height={600} loading="lazy" quality={75} sizes="(max-width: 768px) 50vw, 400px" />
             <span className="nr-gallery-strip__caption">{item.label}</span>
           </div>
         ))}
@@ -220,7 +221,7 @@ export function SplitScreen() {
   return (
     <section className="nr-split" onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
       <div className="nr-split__left" ref={leftRef}>
-        <img src="/assets/images/editorial/editorial-1-1200.avif" alt="Karsten, photographe de mariage" />
+        <Image src="/assets/images/editorial/editorial-1-1200.avif" alt="Karsten, photographe de mariage" width={1200} height={800} loading="lazy" quality={80} sizes="(max-width: 768px) 100vw, 50vw" />
       </div>
       <div className="nr-split__right" ref={rightRef}>
         <p className="nr-split__label">À propos</p>
@@ -242,15 +243,25 @@ export function SplitScreen() {
 // ═══════════════════════════════════════════
 // PageTransition — voile doré entre pages
 // ═══════════════════════════════════════════
+import { useRouter, usePathname } from 'next/navigation';
+
 export function PageTransition() {
   const ref = useRef(null);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Fade-out on mount / route change
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    el.classList.add('nr-page-transition--out');
+    const t = setTimeout(() => el.classList.remove('nr-page-transition--out'), 600);
+    return () => clearTimeout(t);
+  }, [pathname]);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-
-    el.classList.add('nr-page-transition--out');
-    const t = setTimeout(() => el.classList.remove('nr-page-transition--out'), 600);
 
     const onClick = (e) => {
       const link = e.target.closest('a[href]');
@@ -259,12 +270,12 @@ export function PageTransition() {
       if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
       e.preventDefault();
       el.classList.add('nr-page-transition--in');
-      setTimeout(() => { window.location.href = href; }, 500);
+      setTimeout(() => { router.push(href); }, 500);
     };
 
     document.addEventListener('click', onClick);
-    return () => { clearTimeout(t); document.removeEventListener('click', onClick); };
-  }, []);
+    return () => document.removeEventListener('click', onClick);
+  }, [router]);
 
   return <div ref={ref} className="nr-page-transition" />;
 }
