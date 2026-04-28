@@ -9,7 +9,7 @@ export const metadata = {
     template: '%s | Nerium Photographie',
   },
   description:
-    'Karsten, photographe de mariage dans les Deux-Sèvres (79), près de Niort. Reportages naturels, lumineux et intemporels en France et à l\'international. Prestations de 1290 € à 1990 €.',
+    'Karsten, photographe de mariage dans les Deux-Sèvres (79), près de Niort. Reportages naturels, lumineux et intemporels en France et à l\'international. Prestations de 1090 € à 1790 €.',
   keywords: [
     'photographe mariage',
     'photographe mariage Deux-Sèvres',
@@ -79,7 +79,7 @@ function JsonLd() {
     telephone: '+33650542522',
     email: 'nerium.photographie@gmail.com',
     image: `${BASE_URL}/assets/images/hero/hero-1920.avif`,
-    priceRange: '1290€ - 1990€',
+    priceRange: '1090€ - 1790€',
     address: {
       '@type': 'PostalAddress',
       addressRegion: 'Deux-Sèvres',
@@ -108,11 +108,11 @@ function JsonLd() {
       name: 'Reportage de mariage',
       description: 'Photographie de mariage naturelle et intemporelle — des préparatifs à la soirée',
       priceCurrency: 'EUR',
-      price: '1290',
+      price: '1090',
       priceSpecification: {
         '@type': 'PriceSpecification',
-        minPrice: '1290',
-        maxPrice: '1990',
+        minPrice: '1090',
+        maxPrice: '1790',
         priceCurrency: 'EUR',
       },
     },

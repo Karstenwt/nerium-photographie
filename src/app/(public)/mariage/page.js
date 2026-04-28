@@ -4,7 +4,7 @@ import MagneticWord from '@/components/MagneticWord'
 
 export const metadata = {
   title: 'Prestations & tarifs mariage — Photographe Deux-Sèvres (79)',
-  description: 'Découvrez mes prestations de photographe de mariage dans les Deux-Sèvres (79), près de Niort. Reportage naturel et lumineux, du préparatif à la soirée. Forfaits de 1 290 € à 1 990 €. Disponible en Nouvelle-Aquitaine et dans toute la France.',
+  description: 'Découvrez mes prestations de photographe de mariage dans les Deux-Sèvres (79), près de Niort. Reportage naturel et lumineux, du préparatif à la soirée. Forfaits de 1 090 € à 1 790 €. Disponible en Nouvelle-Aquitaine et dans toute la France.',
   alternates: { canonical: 'https://www.nerium-photographie.com/mariage' },
 }
 
@@ -132,23 +132,23 @@ export default function Mariage() {
             <div className="card">
               <h3>Ceremonies</h3>
               <p className="muted">Mairie &middot; Ceremonie &middot; Seance couple &middot; Cocktail</p>
-              <p className="price">1290&euro;</p>
+              <p className="price">1090&euro;</p>
             </div>
             <div className="card">
               <h3>Preparatifs</h3>
               <p className="muted">Preparatifs &middot; Mairie &middot; Ceremonie &middot; Seance couple &middot; Cocktail</p>
-              <p className="price">1490&euro;</p>
+              <p className="price">1290&euro;</p>
             </div>
             <div className="card featured">
               <p className="badge">Le plus choisi</p>
               <h3>Jusqu&apos;a la premiere danse</h3>
               <p className="muted">Ceremonies &middot; Seance couple &middot; Cocktail &middot; Reception</p>
-              <p className="price">1690&euro;</p>
+              <p className="price">1490&euro;</p>
             </div>
             <div className="card">
               <h3>Reportage complet</h3>
               <p className="muted">Preparatifs &middot; Ceremonies &middot; Seance couple &middot; Cocktail &middot; Reception</p>
-              <p className="price">1990&euro;</p>
+              <p className="price">1790&euro;</p>
             </div>
           </div>
         </section>
