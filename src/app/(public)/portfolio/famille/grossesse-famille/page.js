@@ -6,7 +6,7 @@ import MagneticWord from '@/components/MagneticWord'
 export const metadata = {
   title: 'Grossesse & Famille — Nerium Photographie',
   description: 'Séance photo grossesse et famille. Des instants précieux immortalisés par Nerium Photographie.',
-  alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/portrait/grossesse-famille' },
+  alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/famille/grossesse-famille' },
 }
 
 const images = Array.from({ length: 19 }, (_, i) =>

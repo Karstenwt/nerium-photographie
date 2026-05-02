@@ -45,17 +45,17 @@ const galleries = {
       label: 'Reportage de mariage',
     },
   ],
-  couple: [
+  portrait: [
     {
-      href: '/portfolio/couple/portrait-couple',
+      href: '/portfolio/portrait/portrait-couple',
       img: '/assets/images/portfolio/portrait-couple/portrait-couple-01.avif',
       title: 'Portrait Couple',
       label: 'Séance couple',
     },
   ],
-  portrait: [
+  famille: [
     {
-      href: '/portfolio/portrait/grossesse-famille',
+      href: '/portfolio/famille/grossesse-famille',
       img: '/assets/images/portfolio/grossesse-famille/grossesse-famille-01.avif',
       title: 'Grossesse & Famille',
       label: 'Grossesse & Famille',
@@ -67,8 +67,8 @@ export default function PortfolioClient() {
   const [active, setActive] = useState('mariage')
   const cats = [
     { key: 'mariage', label: 'Mariage' },
-    { key: 'couple', label: 'Couple' },
     { key: 'portrait', label: 'Portrait' },
+    { key: 'famille', label: 'Famille' },
   ]
 
   return (

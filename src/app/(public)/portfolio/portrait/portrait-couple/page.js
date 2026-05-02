@@ -6,11 +6,11 @@ import MagneticWord from '@/components/MagneticWord'
 export const metadata = {
   title: 'Portrait Couple — Nerium Photographie',
   description: 'Séance photo de couple. Des moments complices et naturels captés par Nerium Photographie.',
-  alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/couple/portrait-couple' },
+  alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/portrait/portrait-couple' },
 }
 
-const images = Array.from({ length: 13 }, (_, i) =>
-  `/assets/images/portfolio/portrait-couple/portrait-couple-${String(i + 1).padStart(2, '0')}.avif`
+const images = [1,2,4,5,6,7,8,11,12,14,15,16,17].map(n =>
+  `/assets/images/portfolio/portrait-couple/portrait-couple-${String(n).padStart(2, '0')}.avif`
 )
 
 export default function PortraitCouple() {
