@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const NAV_LINKS = [
   { label: 'Accueil',    href: '/',          img: '/assets/images/hero/hero-768.avif'       },
-  { label: 'Portfolio',  href: '/portfolio',  img: '/assets/images/portfolio/sophie-et-antonin/mariée.avif' },
+  { label: 'Portfolio',  href: '/portfolio',  img: '/assets/images/portfolio/sophie-et-antonin/sophie-et-antonin-01.avif' },
   { label: 'Mariages',   href: '/mariage',    img: '/assets/images/hero/hero-1280-.avif'     },
   { label: 'À propos',   href: '/a-propos',   img: '/assets/images/editorial/editorial-1-600.avif' },
   { label: 'Contact',    href: '/contact',    img: '/assets/images/editorial/editorial-2-600.avif' },
