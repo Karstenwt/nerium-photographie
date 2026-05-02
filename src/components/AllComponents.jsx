@@ -132,12 +132,12 @@ export function LiveCounter({ firstDate = '2014-09-20' }) {
 // GalleryStrip — galerie défilante infinie
 // ═══════════════════════════════════════════
 const GALLERY_ITEMS = [
-  { src: '/assets/images/portfolio/sophie-et-antonin/preparatif.avif',             label: 'Préparatifs' },
-  { src: '/assets/images/portfolio/sophie-et-antonin/eglise.avif',                 label: 'Cérémonie'   },
-  { src: '/assets/images/portfolio/sophie-et-antonin/mariée.avif',                 label: 'Portrait'    },
-  { src: '/assets/images/portfolio/sophie-et-antonin/entree-eglise.avif',          label: 'Émotion'     },
-  { src: '/assets/images/portfolio/sophie-et-antonin/robe.avif',                   label: 'Détails'     },
-  { src: "/assets/images/portfolio/sophie-et-antonin/demoiselle-d'honneurs.avif",  label: 'Tendresse'   },
+  { src: '/assets/images/portfolio/sophie-et-antonin/sophie-et-antonin-01.avif',   label: 'Préparatifs' },
+  { src: '/assets/images/portfolio/celine-et-paul/celine-et-paul-05.avif',         label: 'Cérémonie'   },
+  { src: '/assets/images/portfolio/blandine-et-yann/blandine-et-yann-03.avif',     label: 'Portrait'    },
+  { src: '/assets/images/portfolio/louise-et-nicolas/louise-et-nicolas-10.avif',   label: 'Émotion'     },
+  { src: '/assets/images/portfolio/emilie-et-moussa/emilie-et-moussa-02.avif',     label: 'Détails'     },
+  { src: '/assets/images/portfolio/marie-et-marc/marie-et-marc-08.avif',           label: 'Tendresse'   },
 ];
 
 export function GalleryStrip() {
