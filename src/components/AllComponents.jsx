@@ -250,10 +250,10 @@ export function PageTransition() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Fade-out on mount / route change
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    el.classList.remove('nr-page-transition--in');
     el.classList.add('nr-page-transition--out');
     const t = setTimeout(() => el.classList.remove('nr-page-transition--out'), 600);
     return () => clearTimeout(t);
