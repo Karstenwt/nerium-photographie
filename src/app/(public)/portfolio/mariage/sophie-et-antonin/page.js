@@ -9,23 +9,16 @@ export const metadata = {
   alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/sophie-et-antonin' },
 }
 
-const images = [
-  '/assets/images/portfolio/sophie-et-antonin/mariée.avif',
-  '/assets/images/portfolio/sophie-et-antonin/preparatif.avif',
-  '/assets/images/portfolio/sophie-et-antonin/robe.avif',
-  '/assets/images/portfolio/sophie-et-antonin/eglise.avif',
-  '/assets/images/portfolio/sophie-et-antonin/entree-eglise.avif',
-  "/assets/images/portfolio/sophie-et-antonin/demoiselle-d'honneurs.avif",
-  '/assets/images/portfolio/sophie-et-antonin/escalier-mariée.avif',
-]
+const images = Array.from({ length: 25 }, (_, i) =>
+  `/assets/images/portfolio/sophie-et-antonin/sophie-antonin-${String(i + 1).padStart(2, '0')}.avif`
+)
 
 export default function SophieEtAntonin() {
   return (
     <>
-      {/* HERO IMAGE */}
       <div className="gallery-hero">
         <Image
-          src="/assets/images/portfolio/sophie-et-antonin/mariée.avif"
+          src="/assets/images/portfolio/sophie-et-antonin/sophie-antonin-01.avif"
           alt="Sophie & Antonin — Reportage de mariage"
           width={1920} height={1080}
           priority
@@ -34,7 +27,6 @@ export default function SophieEtAntonin() {
         />
       </div>
 
-      {/* INTRO */}
       <div className="gallery-intro">
         <Link href="/portfolio" className="gallery-back">← Portfolio</Link>
         <p className="gallery-overline">Reportage de mariage</p>
@@ -45,7 +37,6 @@ export default function SophieEtAntonin() {
         </p>
       </div>
 
-      {/* GALERIE */}
       <div className="gallery-content">
         <Lightbox images={images} />
       </div>
