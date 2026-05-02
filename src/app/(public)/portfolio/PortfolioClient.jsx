@@ -47,18 +47,18 @@ const galleries = {
   ],
   couple: [
     {
-      href: '#',
-      img: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80',
-      title: 'Séance couple',
-      label: 'Séance photo',
+      href: '/portfolio/couple/portrait-couple',
+      img: '/assets/images/portfolio/portrait-couple/portrait-couple-01.avif',
+      title: 'Portrait Couple',
+      label: 'Séance couple',
     },
   ],
   portrait: [
     {
-      href: '#',
-      img: 'https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=1200&q=80',
-      title: 'Portrait lifestyle',
-      label: 'Portrait',
+      href: '/portfolio/portrait/grossesse-famille',
+      img: '/assets/images/portfolio/grossesse-famille/grossesse-famille-01.avif',
+      title: 'Grossesse & Famille',
+      label: 'Grossesse & Famille',
     },
   ],
 }
