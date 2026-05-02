@@ -9,8 +9,8 @@ export const metadata = {
   alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/sophie-et-antonin' },
 }
 
-const images = Array.from({ length: 25 }, (_, i) =>
-  `/assets/images/portfolio/sophie-et-antonin/sophie-antonin-${String(i + 1).padStart(2, '0')}.avif`
+const images = Array.from({ length: 43 }, (_, i) =>
+  `/assets/images/portfolio/sophie-et-antonin/sophie-et-antonin-${String(i + 1).padStart(2, '0')}.avif`
 )
 
 export default function SophieEtAntonin() {
@@ -18,7 +18,7 @@ export default function SophieEtAntonin() {
     <>
       <div className="gallery-hero">
         <Image
-          src="/assets/images/portfolio/sophie-et-antonin/sophie-antonin-01.avif"
+          src="/assets/images/portfolio/sophie-et-antonin/sophie-et-antonin-01.avif"
           alt="Sophie & Antonin — Reportage de mariage"
           width={1920} height={1080}
           priority

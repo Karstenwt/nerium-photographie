@@ -9,8 +9,8 @@ export const metadata = {
   alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/blandine-et-yann' },
 }
 
-const images = Array.from({ length: 25 }, (_, i) =>
-  `/assets/images/portfolio/blandine-et-yann/blandine-yann-${String(i + 1).padStart(2, '0')}.avif`
+const images = Array.from({ length: 101 }, (_, i) =>
+  `/assets/images/portfolio/blandine-et-yann/blandine-et-yann-${String(i + 1).padStart(2, '0')}.avif`
 )
 
 export default function BlandineEtYann() {
@@ -18,7 +18,7 @@ export default function BlandineEtYann() {
     <>
       <div className="gallery-hero">
         <Image
-          src="/assets/images/portfolio/blandine-et-yann/blandine-yann-01.avif"
+          src="/assets/images/portfolio/blandine-et-yann/blandine-et-yann-01.avif"
           alt="Blandine & Yann — Reportage de mariage"
           width={1920} height={1080}
           priority

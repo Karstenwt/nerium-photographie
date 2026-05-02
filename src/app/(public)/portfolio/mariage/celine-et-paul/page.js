@@ -9,8 +9,8 @@ export const metadata = {
   alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/celine-et-paul' },
 }
 
-const images = Array.from({ length: 25 }, (_, i) =>
-  `/assets/images/portfolio/celine-et-paul/celine-paul-${String(i + 1).padStart(2, '0')}.avif`
+const images = Array.from({ length: 117 }, (_, i) =>
+  `/assets/images/portfolio/celine-et-paul/celine-et-paul-${String(i + 1).padStart(2, '0')}.avif`
 )
 
 export default function CelineEtPaul() {
@@ -18,7 +18,7 @@ export default function CelineEtPaul() {
     <>
       <div className="gallery-hero">
         <Image
-          src="/assets/images/portfolio/celine-et-paul/celine-paul-01.avif"
+          src="/assets/images/portfolio/celine-et-paul/celine-et-paul-01.avif"
           alt="Céline & Paul — Reportage de mariage"
           width={1920} height={1080}
           priority

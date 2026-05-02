@@ -9,8 +9,8 @@ export const metadata = {
   alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/marie-et-marc' },
 }
 
-const images = Array.from({ length: 25 }, (_, i) =>
-  `/assets/images/portfolio/marie-et-marc/marie-marc-${String(i + 1).padStart(2, '0')}.avif`
+const images = Array.from({ length: 93 }, (_, i) =>
+  `/assets/images/portfolio/marie-et-marc/marie-et-marc-${String(i + 1).padStart(2, '0')}.avif`
 )
 
 export default function MarieEtMarc() {
@@ -18,7 +18,7 @@ export default function MarieEtMarc() {
     <>
       <div className="gallery-hero">
         <Image
-          src="/assets/images/portfolio/marie-et-marc/marie-marc-01.avif"
+          src="/assets/images/portfolio/marie-et-marc/marie-et-marc-01.avif"
           alt="Marie & Marc — Reportage de mariage"
           width={1920} height={1080}
           priority

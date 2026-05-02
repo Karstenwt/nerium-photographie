@@ -9,8 +9,8 @@ export const metadata = {
   alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/emilie-et-moussa' },
 }
 
-const images = Array.from({ length: 25 }, (_, i) =>
-  `/assets/images/portfolio/emilie-et-moussa/emilie-moussa-${String(i + 1).padStart(2, '0')}.avif`
+const images = Array.from({ length: 58 }, (_, i) =>
+  `/assets/images/portfolio/emilie-et-moussa/emilie-et-moussa-${String(i + 1).padStart(2, '0')}.avif`
 )
 
 export default function EmilieEtMoussa() {
@@ -18,7 +18,7 @@ export default function EmilieEtMoussa() {
     <>
       <div className="gallery-hero">
         <Image
-          src="/assets/images/portfolio/emilie-et-moussa/emilie-moussa-01.avif"
+          src="/assets/images/portfolio/emilie-et-moussa/emilie-et-moussa-01.avif"
           alt="Emilie & Moussa — Reportage de mariage"
           width={1920} height={1080}
           priority

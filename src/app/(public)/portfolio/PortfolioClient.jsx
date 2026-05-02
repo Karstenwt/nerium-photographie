@@ -10,37 +10,37 @@ const galleries = {
   mariage: [
     {
       href: '/portfolio/mariage/sophie-et-antonin',
-      img: '/assets/images/portfolio/sophie-et-antonin/sophie-antonin-01.avif',
+      img: '/assets/images/portfolio/sophie-et-antonin/sophie-et-antonin-01.avif',
       title: 'Sophie & Antonin',
       label: 'Reportage de mariage',
     },
     {
       href: '/portfolio/mariage/blandine-et-yann',
-      img: '/assets/images/portfolio/blandine-et-yann/blandine-yann-01.avif',
+      img: '/assets/images/portfolio/blandine-et-yann/blandine-et-yann-01.avif',
       title: 'Blandine & Yann',
       label: 'Reportage de mariage',
     },
     {
       href: '/portfolio/mariage/celine-et-paul',
-      img: '/assets/images/portfolio/celine-et-paul/celine-paul-01.avif',
+      img: '/assets/images/portfolio/celine-et-paul/celine-et-paul-01.avif',
       title: 'Céline & Paul',
       label: 'Reportage de mariage',
     },
     {
       href: '/portfolio/mariage/emilie-et-moussa',
-      img: '/assets/images/portfolio/emilie-et-moussa/emilie-moussa-01.avif',
+      img: '/assets/images/portfolio/emilie-et-moussa/emilie-et-moussa-01.avif',
       title: 'Emilie & Moussa',
       label: 'Reportage de mariage',
     },
     {
       href: '/portfolio/mariage/louise-et-nicolas',
-      img: '/assets/images/portfolio/louise-et-nicolas/louise-nicolas-01.avif',
+      img: '/assets/images/portfolio/louise-et-nicolas/louise-et-nicolas-01.avif',
       title: 'Louise & Nicolas',
       label: 'Reportage de mariage',
     },
     {
       href: '/portfolio/mariage/marie-et-marc',
-      img: '/assets/images/portfolio/marie-et-marc/marie-marc-01.avif',
+      img: '/assets/images/portfolio/marie-et-marc/marie-et-marc-01.avif',
       title: 'Marie & Marc',
       label: 'Reportage de mariage',
     },

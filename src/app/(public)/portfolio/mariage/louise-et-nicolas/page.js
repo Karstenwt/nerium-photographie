@@ -9,8 +9,8 @@ export const metadata = {
   alternates: { canonical: 'https://www.nerium-photographie.com/portfolio/mariage/louise-et-nicolas' },
 }
 
-const images = Array.from({ length: 25 }, (_, i) =>
-  `/assets/images/portfolio/louise-et-nicolas/louise-nicolas-${String(i + 1).padStart(2, '0')}.avif`
+const images = Array.from({ length: 174 }, (_, i) =>
+  `/assets/images/portfolio/louise-et-nicolas/louise-et-nicolas-${String(i + 1).padStart(2, '0')}.avif`
 )
 
 export default function LouiseEtNicolas() {
@@ -18,7 +18,7 @@ export default function LouiseEtNicolas() {
     <>
       <div className="gallery-hero">
         <Image
-          src="/assets/images/portfolio/louise-et-nicolas/louise-nicolas-01.avif"
+          src="/assets/images/portfolio/louise-et-nicolas/louise-et-nicolas-01.avif"
           alt="Louise & Nicolas — Reportage de mariage"
           width={1920} height={1080}
           priority
