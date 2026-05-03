@@ -36,10 +36,11 @@ export const metadata = {
       'Reportages de mariage naturels, lumineux et intemporels. Photographe basé dans les Deux-Sèvres, disponible en France et à l\'international.',
     images: [
       {
-        url: '/assets/images/hero/hero-1920.avif',
+        url: '/assets/images/hero/og-image.jpg',
         width: 1920,
         height: 1080,
         alt: 'Nerium Photographie — Photographe de mariage dans les Deux-Sèvres',
+        type: 'image/jpeg',
       },
     ],
   },
@@ -48,7 +49,7 @@ export const metadata = {
     title: 'Photographe de mariage Deux-Sèvres (79) | Nerium Photographie',
     description:
       'Reportages de mariage naturels, lumineux et intemporels. Photographe basé près de Niort.',
-    images: ['/assets/images/hero/hero-1920.avif'],
+    images: ['/assets/images/hero/og-image.jpg'],
   },
   alternates: {
     canonical: BASE_URL,
@@ -78,7 +79,7 @@ function JsonLd() {
       url: BASE_URL,
       telephone: '+33650542522',
       email: 'nerium.photographie@gmail.com',
-      image: `${BASE_URL}/assets/images/hero/hero-1920.avif`,
+      image: `${BASE_URL}/assets/images/hero/og-image.jpg`,
       priceRange: '1090€ - 1790€',
       address: {
         '@type': 'PostalAddress',
@@ -129,7 +130,7 @@ function JsonLd() {
       jobTitle: 'Photographe de mariage',
       worksFor: { '@id': `${BASE_URL}/#business` },
       url: `${BASE_URL}/a-propos`,
-      image: `${BASE_URL}/assets/images/hero/hero-1920.avif`,
+      image: `${BASE_URL}/assets/images/hero/og-image.jpg`,
       knowsAbout: ['Photographie de mariage', 'Reportage', 'Photographie éditoriale', 'Photographie naturelle'],
     },
     {
