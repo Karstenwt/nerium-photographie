@@ -175,7 +175,7 @@ const TESTIMONIALS = [
   { author: 'Théo & Anastasia', text: 'Discret mais présent, il nous a mis très à l\'aise. Des photos prises sur l\'instant, naturelles. Merci encore !' },
   { author: 'Coralie', text: 'Professionnel et très accessible, il s\'est fait discret tout en captant les moments essentiels. On recommande +++++' },
   { author: 'Audrey', text: 'Discret pendant toute la journée, il a su capturer de beaux moments. À l\'écoute, respectueux de nos envies. Très professionnel.' },
-  { author: 'Clément', text: 'Fantastique — abordable, à l\'écoute, discret et rapide. Nous ne trouverez probablement pas meilleur photographe de mariage.' },
+  { author: 'Clément', text: 'Fantastique — abordable, à l\'écoute, discret et rapide. Vous ne trouverez probablement pas meilleur photographe de mariage.' },
   { author: 'Pauline', text: 'Il a très bien capturé l\'émotion de la journée, sans jamais rien imposer. Photos magnifiques, douces et naturelles.' },
   { author: 'Emilie', text: 'Calme et discret, il s\'est adapté à nous dès les premiers instants. Les photos sont remplies d\'émotion, tout était parfait.' },
   { author: 'Morgane', text: 'On ressent l\'émotion, le rire et l\'amour à travers chaque photo. Nous qui ne sommes pas à l\'aise devant l\'objectif, on a adoré.' },

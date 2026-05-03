@@ -14,8 +14,8 @@ export default function APropos() {
       {/* HERO */}
       <header className="hero hero-simple">
         <div className="hero-content center">
-          <p className="hero-overline">Photographe de <MagneticWord>mariage</MagneticWord> &middot; Approche editoriale &amp; <MagneticWord>humaine</MagneticWord></p>
-          <h1 className="hero-signature">A propos</h1>
+          <p className="hero-overline">Photographe de <MagneticWord>mariage</MagneticWord> &middot; Approche éditoriale &amp; <MagneticWord>humaine</MagneticWord></p>
+          <h1 className="hero-signature">À propos</h1>
         </div>
       </header>
 
@@ -24,16 +24,16 @@ export default function APropos() {
         <Reveal className="editorial-block">
           <p className="editorial-text">
             Je m&apos;appelle <strong>Karsten</strong>, photographe de <MagneticWord>mariage</MagneticWord>.
-            Mon travail s&apos;articule autour de la <MagneticWord>lumiere</MagneticWord> <MagneticWord>naturelle</MagneticWord>,
-            des <MagneticWord>emotions</MagneticWord> <MagneticWord>sinceres</MagneticWord> et d&apos;une approche douce, inspiree de l&apos;editorial.
+            Mon travail s&apos;articule autour de la <MagneticWord>lumière</MagneticWord> <MagneticWord>naturelle</MagneticWord>,
+            des <MagneticWord>émotions</MagneticWord> <MagneticWord>sincères</MagneticWord> et d&apos;une approche douce, inspirée de l&apos;éditorial.
           </p>
         </Reveal>
         <Reveal className="editorial-block">
           <p className="editorial-text">
             J&apos;aime raconter les histoires telles qu&apos;elles se vivent,
             sans intervenir, sans forcer.
-            Mon role est d&apos;observer, d&apos;anticiper et de capturer
-            les <MagneticWord>instants</MagneticWord> vrais qui composent votre journee.
+            Mon rôle est d&apos;observer, d&apos;anticiper et de capturer
+            les <MagneticWord>instants</MagneticWord> vrais qui composent votre journée.
           </p>
         </Reveal>
       </section>
@@ -43,24 +43,24 @@ export default function APropos() {
         <section className="section">
           <div className="cards">
             <div className="card">
-              <h3>Discretion</h3>
+              <h3>Discrétion</h3>
               <p className="muted">
-                Etre present sans s&apos;imposer,
-                pour laisser les moments se derouler naturellement.
+                Être présent sans s&apos;imposer,
+                pour laisser les moments se dérouler naturellement.
               </p>
             </div>
             <div className="card">
-              <h3><MagneticWord>Lumiere</MagneticWord></h3>
+              <h3><MagneticWord>Lumière</MagneticWord></h3>
               <p className="muted">
-                Travailler avec la <MagneticWord>lumiere</MagneticWord> disponible,
-                rechercher la douceur et l&apos;equilibre dans chaque image.
+                Travailler avec la <MagneticWord>lumière</MagneticWord> disponible,
+                rechercher la douceur et l&apos;équilibre dans chaque image.
               </p>
             </div>
             <div className="card">
-              <h3>Intemporalite</h3>
+              <h3>Intemporalité</h3>
               <p className="muted">
-                Creer des images elegantes,
-                qui traversent le temps sans se demoder.
+                Créer des images élégantes,
+                qui traversent le temps sans se démoder.
               </p>
             </div>
           </div>
@@ -74,9 +74,9 @@ export default function APropos() {
         </Reveal>
         <Reveal className="editorial-block">
           <p className="editorial-text" style={{ textAlign: 'center' }}>
-            La photographie s&apos;est imposee naturellement,
-            a la croisee de mon interet pour l&apos;esthetique,
-            le recit et les relations <MagneticWord>humaines</MagneticWord>.
+            La photographie s&apos;est imposée naturellement,
+            à la croisée de mon intérêt pour l&apos;esthétique,
+            le récit et les relations <MagneticWord>humaines</MagneticWord>.
             Chaque <MagneticWord>mariage</MagneticWord> est pour moi une rencontre,
             un moment de confiance et de partage.
           </p>

@@ -44,7 +44,7 @@ export async function POST(request) {
     // Notification à Karsten sur Gmail
     await resend.emails.send({
       from:    'Nerium Photographie <onboarding@resend.dev>',
-      to:      ['nerium.photographie@gmail.com'],
+      to:      ['karsten.walraet@gmail.com'],
       subject: `Nouvelle demande — ${prenoms} — ${date} à ${lieu}`,
       html: `
         <div style="font-family: Georgia, serif; max-width: 560px; margin: 0 auto; padding: 32px 24px;">

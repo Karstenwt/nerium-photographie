@@ -15,11 +15,11 @@ export default function Mariage() {
       {/* HERO */}
       <header className="hero hero-simple">
         <div className="hero-content center">
-          <p className="hero-overline">Photographe de mariage &middot; Deux-Sevres (79)</p>
+          <p className="hero-overline">Photographe de mariage &middot; Deux-Sèvres (79)</p>
           <h1 className="hero-signature">Reportage de mariage</h1>
           <p className="hero-text">
             Une approche <MagneticWord>naturelle</MagneticWord> et <MagneticWord>humaine</MagneticWord><br />
-            pour raconter votre journee avec sincerite.
+            pour raconter votre journée avec sincérité.
           </p>
         </div>
       </header>
@@ -29,22 +29,22 @@ export default function Mariage() {
         <Reveal className="editorial-block">
           <p className="editorial-text">
             Choisir son photographe de <MagneticWord>mariage</MagneticWord> n&apos;est jamais simple.
-            Les styles sont nombreux, les approches differentes, et il est parfois
-            difficile de savoir si une personne correspond reellement a ce que vous recherchez.
+            Les styles sont nombreux, les approches différentes, et il est parfois
+            difficile de savoir si une personne correspond réellement à ce que vous recherchez.
           </p>
         </Reveal>
 
         <Reveal className="editorial-block">
           <p className="editorial-text">
-            Pour photographier un evenement aussi important que votre <MagneticWord>mariage</MagneticWord>,
-            la confiance est essentielle. Mon role est de vous accompagner avec
-            discretion, bienveillance et professionnalisme, afin que vous puissiez
-            profiter pleinement de votre journee.
+            Pour photographier un événement aussi important que votre <MagneticWord>mariage</MagneticWord>,
+            la confiance est essentielle. Mon rôle est de vous accompagner avec
+            discrétion, bienveillance et professionnalisme, afin que vous puissiez
+            profiter pleinement de votre journée.
           </p>
         </Reveal>
       </section>
 
-      {/* IMAGE EDITORIALE */}
+      {/* IMAGE ÉDITORIALE */}
       <section className="editorial-dark">
         <Reveal className="editorial-block media">
           <Image
@@ -68,15 +68,15 @@ export default function Mariage() {
           <p className="editorial-text">
             Je travaille dans une approche de reportage. J&apos;observe, j&apos;anticipe,
             et je capture les moments tels qu&apos;ils se vivent, sans intervenir dans
-            le deroulement de votre journee.
+            le déroulement de votre journée.
           </p>
         </Reveal>
 
         <Reveal className="editorial-block">
           <p className="editorial-text">
-            Les photos posees sont limitees au strict necessaire
+            Les photos posées sont limitées au strict nécessaire
             (photos de couple et photos de groupe, si vous le souhaitez).
-            Le reste du temps, je privilegie l&apos;<MagneticWord>authenticite</MagneticWord>, les <MagneticWord>emotions</MagneticWord>,
+            Le reste du temps, je privilégie l&apos;<MagneticWord>authenticité</MagneticWord>, les <MagneticWord>émotions</MagneticWord>,
             et les liens entre les personnes qui comptent pour vous.
           </p>
         </Reveal>
@@ -87,23 +87,23 @@ export default function Mariage() {
         <section className="section">
           <div className="cards">
             <div className="card">
-              <h3><MagneticWord>Naturel</MagneticWord> &amp; spontane</h3>
+              <h3><MagneticWord>Naturel</MagneticWord> &amp; spontané</h3>
               <p className="muted">
-                Un reportage <MagneticWord>discret</MagneticWord> pour capter les <MagneticWord>emotions</MagneticWord> reelles,
-                sans perturber votre journee.
+                Un reportage <MagneticWord>discret</MagneticWord> pour capter les <MagneticWord>émotions</MagneticWord> réelles,
+                sans perturber votre journée.
               </p>
             </div>
             <div className="card">
               <h3>Lumineux &amp; <MagneticWord>intemporel</MagneticWord></h3>
               <p className="muted">
-                Une esthetique claire et elegante,
-                pensee pour traverser le temps sans se demoder.
+                Une esthétique claire et élégante,
+                pensée pour traverser le temps sans se démoder.
               </p>
             </div>
             <div className="card">
-              <h3><MagneticWord>Humain</MagneticWord> &amp; engage</h3>
+              <h3><MagneticWord>Humain</MagneticWord> &amp; engagé</h3>
               <p className="muted">
-                Une relation basee sur l&apos;ecoute, l&apos;empathie
+                Une relation basée sur l&apos;écoute, l&apos;empathie
                 et la confiance.
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function Mariage() {
         <Reveal className="editorial-block">
           <p className="editorial-text">
             Les forfaits ci-dessous correspondent aux demandes les plus courantes.
-            Ils peuvent etre adaptes selon vos besoins et le deroulement de votre journee.
+            Ils peuvent être adaptés selon vos besoins et le déroulement de votre journée.
           </p>
         </Reveal>
       </section>
@@ -129,40 +129,40 @@ export default function Mariage() {
         <section className="section">
           <div className="cards pricing">
             <div className="card">
-              <h3>Ceremonies</h3>
-              <p className="muted">Mairie &middot; Ceremonie &middot; Seance couple &middot; Cocktail</p>
+              <h3>Cérémonies</h3>
+              <p className="muted">Mairie &middot; Cérémonie &middot; Séance couple &middot; Cocktail</p>
               <p className="price">1090&euro;</p>
             </div>
             <div className="card">
-              <h3>Preparatifs</h3>
-              <p className="muted">Preparatifs &middot; Mairie &middot; Ceremonie &middot; Seance couple &middot; Cocktail</p>
+              <h3>Préparatifs</h3>
+              <p className="muted">Préparatifs &middot; Mairie &middot; Cérémonie &middot; Séance couple &middot; Cocktail</p>
               <p className="price">1290&euro;</p>
             </div>
             <div className="card featured">
               <p className="badge">Le plus choisi</p>
-              <h3>Jusqu&apos;a la premiere danse</h3>
-              <p className="muted">Ceremonies &middot; Seance couple &middot; Cocktail &middot; Reception</p>
+              <h3>Jusqu&apos;à la première danse</h3>
+              <p className="muted">Cérémonies &middot; Séance couple &middot; Cocktail &middot; Réception</p>
               <p className="price">1490&euro;</p>
             </div>
             <div className="card">
               <h3>Reportage complet</h3>
-              <p className="muted">Preparatifs &middot; Ceremonies &middot; Seance couple &middot; Cocktail &middot; Reception</p>
+              <p className="muted">Préparatifs &middot; Cérémonies &middot; Séance couple &middot; Cocktail &middot; Réception</p>
               <p className="price">1790&euro;</p>
             </div>
           </div>
         </section>
       </Reveal>
 
-      {/* A PROPOS */}
+      {/* À PROPOS */}
       <section className="editorial-dark about">
         <Reveal className="editorial-block center">
-          <h2 className="editorial-title">Derriere l&apos;objectif</h2>
+          <h2 className="editorial-title">Derrière l&apos;objectif</h2>
         </Reveal>
         <Reveal className="editorial-block">
           <p className="editorial-text">
-            Je m&apos;appelle <strong>Karsten</strong>, photographe de <MagneticWord>mariage</MagneticWord> base dans les{' '}
-            <strong>Deux-Sevres (79)</strong>.
-            Mon approche est <MagneticWord>discrete</MagneticWord>, sensible et profondement <MagneticWord>humaine</MagneticWord>.
+            Je m&apos;appelle <strong>Karsten</strong>, photographe de <MagneticWord>mariage</MagneticWord> basé dans les{' '}
+            <strong>Deux-Sèvres (79)</strong>.
+            Mon approche est <MagneticWord>discrète</MagneticWord>, sensible et profondément <MagneticWord>humaine</MagneticWord>.
           </p>
         </Reveal>
         <Reveal className="editorial-block">
@@ -181,7 +181,7 @@ export default function Mariage() {
             Vous vous reconnaissez dans cette approche&nbsp;?
           </h2>
           <p className="cta-sub">
-            Parlons de votre journee, de votre lieu et de ce qui compte vraiment pour vous.
+            Parlons de votre journée, de votre lieu et de ce qui compte vraiment pour vous.
           </p>
           <Link href="/contact" className="cta-btn">Me contacter &rarr;</Link>
         </section>
