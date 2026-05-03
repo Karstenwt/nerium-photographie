@@ -1,11 +1,19 @@
 import Link from 'next/link'
 import MagneticWord from '@/components/MagneticWord'
-import HomeClient from './HomeClient'
+import HeroSection from '@/components/HeroSection'
+import { StatsBar, LiveCounter, GalleryStrip, TestimonialsStrip, SplitScreen } from '@/components/AllComponents'
+import MapMariages from '@/components/MapMariages'
 
 export default function Home() {
   return (
     <>
-      <HomeClient />
+      <HeroSection />
+      <StatsBar />
+      <SplitScreen />
+      <GalleryStrip />
+      <TestimonialsStrip />
+      <LiveCounter />
+      <MapMariages />
 
       {/* CTA FINAL */}
       <section className="cta-section">
