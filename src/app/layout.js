@@ -68,60 +68,85 @@ export const metadata = {
 
 // Données structurées JSON-LD
 function JsonLd() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': BASE_URL,
-    name: 'Nerium Photographie',
-    description:
-      'Photographe de mariage dans les Deux-Sèvres (79). Reportages naturels, lumineux et intemporels.',
-    url: BASE_URL,
-    telephone: '+33650542522',
-    email: 'nerium.photographie@gmail.com',
-    image: `${BASE_URL}/assets/images/hero/hero-1920.avif`,
-    priceRange: '1090€ - 1790€',
-    address: {
-      '@type': 'PostalAddress',
-      addressRegion: 'Deux-Sèvres',
-      postalCode: '79',
-      addressCountry: 'FR',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 46.32,
-      longitude: -0.46,
-    },
-    areaServed: [
-      { '@type': 'Country', name: 'France' },
-      { '@type': 'AdministrativeArea', name: 'Deux-Sèvres' },
-      { '@type': 'AdministrativeArea', name: 'Nouvelle-Aquitaine' },
-    ],
-    sameAs: [],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '20',
-      bestRating: '5',
-    },
-    makesOffer: {
-      '@type': 'Offer',
-      name: 'Reportage de mariage',
-      description: 'Photographie de mariage naturelle et intemporelle — des préparatifs à la soirée',
-      priceCurrency: 'EUR',
-      price: '1090',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        minPrice: '1090',
-        maxPrice: '1790',
-        priceCurrency: 'EUR',
+  const schemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': ['LocalBusiness', 'ProfessionalService'],
+      '@id': `${BASE_URL}/#business`,
+      name: 'Nerium Photographie',
+      description: 'Photographe de mariage dans les Deux-Sèvres (79), près de Niort. Reportages naturels, lumineux et intemporels en France et à l\'international.',
+      url: BASE_URL,
+      telephone: '+33650542522',
+      email: 'nerium.photographie@gmail.com',
+      image: `${BASE_URL}/assets/images/hero/hero-1920.avif`,
+      priceRange: '1090€ - 1790€',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Deux-Sèvres',
+        addressLocality: 'Niort',
+        postalCode: '79000',
+        addressRegion: 'Deux-Sèvres',
+        addressCountry: 'FR',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 46.3225,
+        longitude: -0.4618,
+      },
+      areaServed: [
+        { '@type': 'Country',             name: 'France'           },
+        { '@type': 'AdministrativeArea',  name: 'Deux-Sèvres'     },
+        { '@type': 'AdministrativeArea',  name: 'Nouvelle-Aquitaine' },
+        { '@type': 'City',               name: 'Niort'            },
+        { '@type': 'City',               name: 'Poitiers'         },
+        { '@type': 'City',               name: 'La Rochelle'      },
+        { '@type': 'City',               name: 'Bordeaux'         },
+        { '@type': 'City',               name: 'Nantes'           },
+      ],
+      sameAs: [],
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5',
+        reviewCount: '20',
+        bestRating: '5',
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Prestations mariage',
+        itemListElement: [
+          { '@type': 'Offer', name: 'Cérémonies',             price: '1090', priceCurrency: 'EUR' },
+          { '@type': 'Offer', name: 'Préparatifs',            price: '1290', priceCurrency: 'EUR' },
+          { '@type': 'Offer', name: "Jusqu'à la première danse", price: '1490', priceCurrency: 'EUR' },
+          { '@type': 'Offer', name: 'Reportage complet',      price: '1790', priceCurrency: 'EUR' },
+        ],
       },
     },
-  }
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': `${BASE_URL}/#person`,
+      name: 'Karsten Walraet',
+      jobTitle: 'Photographe de mariage',
+      worksFor: { '@id': `${BASE_URL}/#business` },
+      url: `${BASE_URL}/a-propos`,
+      image: `${BASE_URL}/assets/images/hero/hero-1920.avif`,
+      knowsAbout: ['Photographie de mariage', 'Reportage', 'Photographie éditoriale', 'Photographie naturelle'],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${BASE_URL}/#website`,
+      url: BASE_URL,
+      name: 'Nerium Photographie',
+      inLanguage: 'fr-FR',
+      publisher: { '@id': `${BASE_URL}/#business` },
+    },
+  ]
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
     />
   )
 }
