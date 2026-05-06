@@ -46,6 +46,7 @@ export default function ContactTunnel() {
   const [answers, setAnswers] = useState({});
   const [current, setCurrent] = useState('');
   const [sent,    setSent]    = useState(false);
+  const [error,   setError]   = useState(false);
   const [sending, setSending] = useState(false);
 
   const currentStep = STEPS[step];
@@ -72,15 +73,18 @@ export default function ContactTunnel() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      if (!res.ok) {
+      if (res.ok) {
+        setSent(true);
+      } else {
         const err = await res.json().catch(() => ({}));
         console.error('Contact API error:', err);
+        setError(true);
       }
     } catch(e) {
       console.error('Contact fetch error:', e);
+      setError(true);
     }
     setSending(false);
-    setSent(true);
   };
 
   const handleKey = (e) => {
@@ -89,6 +93,25 @@ export default function ContactTunnel() {
 
   if (sent) {
     return <TunnelSuccess answers={answers} />;
+  }
+
+  if (error) {
+    return (
+      <section className="nr-tunnel nr-tunnel--success">
+        <div className="nr-tunnel__body">
+          <div className="nr-tunnel__success-icon">✕</div>
+          <h3 className="nr-tunnel__success-title">Une erreur est survenue</h3>
+          <p className="nr-tunnel__success-text">
+            Votre message n&apos;a pas pu être envoyé. Réessayez dans quelques instants
+            ou contactez-moi directement à{' '}
+            <a href="mailto:nerium.photographie@gmail.com">nerium.photographie@gmail.com</a>.
+          </p>
+          <button className="nr-tunnel__next" onClick={() => setError(false)}>
+            Réessayer
+          </button>
+        </div>
+      </section>
+    );
   }
 
   return (
