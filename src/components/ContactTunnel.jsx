@@ -67,12 +67,18 @@ export default function ContactTunnel() {
   const handleSubmit = async (data) => {
     setSending(true);
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-    } catch(e) {}
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        console.error('Contact API error:', err);
+      }
+    } catch(e) {
+      console.error('Contact fetch error:', e);
+    }
     setSending(false);
     setSent(true);
   };
