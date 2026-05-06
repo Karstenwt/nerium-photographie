@@ -77,7 +77,7 @@ export default function ContactTunnel() {
         setSent(true);
       } else {
         const err = await res.json().catch(() => ({}));
-        console.error('Contact API error:', err);
+        console.error('Contact API error:', JSON.stringify(err));
         setError(true);
       }
     } catch(e) {

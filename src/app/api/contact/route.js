@@ -4,6 +4,11 @@ export async function POST(request) {
   const data = await request.json();
   const { date, lieu, prenoms, email, message } = data;
 
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY manquante dans les variables d\'environnement');
+    return NextResponse.json({ success: false, error: 'Configuration email manquante' }, { status: 500 });
+  }
+
   try {
     const { Resend } = await import('resend');
     const resend = new Resend(process.env.RESEND_API_KEY);
