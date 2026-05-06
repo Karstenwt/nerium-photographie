@@ -1,0 +1,91 @@
+/* ================================
+   RESET
+   ================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   VARIABLES — Palette luxe sombre
+   ================================ */
+:root {
+  /* Palette principale */
+  --bg:            #070604;
+  --bg-soft:       #0d0b08;
+  --bg-warm:       #1a150e;
+  --fg:            #f0e8d8;
+  --fg-muted:      rgba(240, 232, 216, 0.55);
+  --fg-subtle:     rgba(240, 232, 216, 0.35);
+
+  /* Accent or champagne */
+  --accent:        #c9a057;
+  --accent-light:  #d9b26a;
+  --accent-dim:    rgba(201, 160, 87, 0.18);
+  --accent-ghost:  rgba(201, 160, 87, 0.08);
+
+  /* Section claire (editorial) */
+  --cream:         #f5efe3;
+  --cream-fg:      #1a1208;
+  --cream-muted:   #4a3e2c;
+  --cream-accent:  #7a5a1e;
+
+  /* Typographies */
+  --font-body:     'Cormorant Garamond', 'Georgia', serif;
+  --font-title:    'Playfair Display', 'Georgia', serif;
+  --font-logo:     'Great Vibes', cursive;
+
+  /* Espacements */
+  --radius:        2px;
+  --radius-md:     6px;
+
+  /* Transitions */
+  --transition:    0.4s cubic-bezier(.22, 1, .36, 1);
+  --transition-fast: 0.2s ease;
+
+  /* Ombres */
+  --shadow:        0 8px 40px rgba(0, 0, 0, 0.4);
+  --shadow-soft:   0 4px 20px rgba(0, 0, 0, 0.25);
+  --shadow-hover:  0 10px 36px rgba(0,0,0,0.5);
+
+  --card:          #111;
+  --muted:         var(--fg-muted);
+
+  /* nr- prefixed aliases (used by new components) */
+  --nr-bg:        #070604;
+  --nr-bg-soft:   #0d0b08;
+  --nr-fg:        #f0e8d8;
+  --nr-fg-muted:  rgba(240,232,216,0.55);
+  --nr-accent:    #c9a057;
+  --nr-accent-l:  #d9b26a;
+  --nr-accent-dim:rgba(201,160,87,0.18);
+  --nr-cream:     #f5efe3;
+  --nr-cream-fg:  #1a1208;
+  --nr-t:         0.4s cubic-bezier(.22,1,.36,1);
+  --nr-t-fast:    0.2s ease;
+}
+
+/* ================================
+   TYPOGRAPHY — Google Fonts
+   ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&display=swap');
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.center { text-align: center; }
+.muted  { color: var(--fg-muted); }
+

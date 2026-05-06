@@ -2,6 +2,13 @@ import './globals.css'
 
 const BASE_URL = 'https://www.nerium-photographie.com'
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#070604',
+}
+
 export const metadata = {
   metadataBase: new URL(BASE_URL),
   title: {

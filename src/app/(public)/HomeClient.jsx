@@ -1,7 +1,11 @@
 'use client'
 
 import HeroSection from '@/components/HeroSection'
-import { StatsBar, LiveCounter, GalleryStrip, TestimonialsStrip, SplitScreen } from '@/components/AllComponents'
+import StatsBar from '@/components/StatsBar'
+import LiveCounter from '@/components/LiveCounter'
+import GalleryStrip from '@/components/GalleryStrip'
+import TestimonialsStrip from '@/components/TestimonialsStrip'
+import SplitScreen from '@/components/SplitScreen'
 import MapMariages from '@/components/MapMariages'
 
 export default function HomeClient() {
